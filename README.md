@@ -31,7 +31,7 @@ npm run build
 
 ## License
 
-ISC © [Santosl2](https://github.com/Santosl2)
+MIT © [Santosl2](https://github.com/Santosl2)
 
 ## Contributing
 

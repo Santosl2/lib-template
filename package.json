@@ -23,7 +23,7 @@
     "typescript"
   ],
   "author": "Santosl2",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist"
   ],
