@@ -1,0 +1,30 @@
+name: Publish Package on GitHub
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+        registry-url: 'https://npm.pkg.github.com'
+
+    - name: Install Dependencies
+      run: npm ci
+    
+    - name: Create dist folder
+      run: npm run build
+
+
+    - name: Publish to GitHub Packages
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
