@@ -64,6 +64,29 @@ To use GitHub Packages with npm, you need to:
 
 This configuration allows npm to authenticate with GitHub Packages when installing or publishing packages.
 
+## Publishing Your Package
+
+### Publish Your Package
+
+Now, let's publish the package to GitHub Packages. Run the following command:
+
+```bash
+npm publish --registry=https://npm.pkg.github.com
+```
+
+If everything is set up correctly, your package will be published to GitHub Packages and available for others to install.
+
+## Automated Publishing
+
+This project is configured with a CI/CD pipeline that automatically publishes the library to npm whenever a new release is created on GitHub. To trigger an automated deployment:
+
+1. Create a new release on GitHub
+2. Tag it with a semantic version (e.g., v1.0.0)
+3. Add release notes
+4. Publish the release
+
+The GitHub Actions workflow will handle the rest, making the updated package available on npm without manual intervention.
+
 ## License
 
 MIT © [Santosl2](https://github.com/Santosl2)
